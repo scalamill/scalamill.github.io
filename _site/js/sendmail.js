@@ -12,15 +12,16 @@ $(document).ready(function() {
             'message'           : $('input[name=message]').val()
         };
 
-        var urlToPost = "https://polar-brushlands-58444.herokuapp.com/sendMail/" + formData.email + "/" + "piyush@scalamill.com" + "/" + formData.subject + "/";
+        var urlToPost = "https://polar-brushlands-58444.herokuapp.com/sendMail/" + 
+        formData.email + "/" + "contact@scalamill.com" + "/" + formData.subject + "/";
 
         // process the form
         $.ajax({
             type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-            url         : 'process.php', // the url where we want to POST
+            url         : urlToPost,
             data        : formData, // our data object
             dataType    : 'json', // what type of data do we expect back from the server
-            encode          : true
+            encode      : true
         })
             // using the done promise callback
             .done(function(data) {
