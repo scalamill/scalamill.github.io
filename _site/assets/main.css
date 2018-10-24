@@ -662,12 +662,6 @@ ol > li::before {
 }
 
 @media only screen and (min-width: 768px) {
-
-.blogpost pre  {
-  background: rgba(78, 11, 146, 0.055);
-  padding:2%;
-} 
-
 .blogpost  h2 {
   font-weight: 700 !important;
   font-size:35px !important;

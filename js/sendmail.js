@@ -6,11 +6,13 @@ $(document).ready(function() {
         // get the form data
         // there are many ways to get this data using jQuery (you can use the class or id also)
         var formData = {
-            'name'              : $('input[name=first]').val(),
-            'email'             : $('input[name=email]').val(),
-            'email'             : $('input[name=subject]').val(),
-            'message'           : $('input[name=message]').val()
+            'firstName'         : $('input[id=icon_face]').val(),
+            'lastName'          : $('input[id=icon_face]').val(),
+            'email'             : $('input[id=icon_email]').val(),
+            'subject'           : 'Contact Form : ' + $('input[id=icon_subject]').val(),
+            'message'           : $('textarea[id=icon_message]').val()
         };
+
 
         var urlToPost = "https://polar-brushlands-58444.herokuapp.com/sendMail/" + 
         formData.email + "/" + "contact@scalamill.com" + "/" + formData.subject + "/";
@@ -28,6 +30,7 @@ $(document).ready(function() {
 
                 // log data to the console so we can see
                 console.log(data); 
+                console.log(formData)
 
                 // here we will handle errors and validation messages
             });
